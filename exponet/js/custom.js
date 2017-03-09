@@ -32,9 +32,4 @@ $(document).ready(function(){
             // instead of a settings object
         ]
     });
-
-    $('.testimonial').slick({
-        autoplay: true,
-        autoplaySpeed: 10000
-    });
 });
