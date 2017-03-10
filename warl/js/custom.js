@@ -1,46 +1,8 @@
 jQuery(document).ready(function($){
 
-    //block content slider
-    //$('.slick-slider').slick({
-    //    slidesToShow: 1,
-    //    slidesToScroll:1,
-    //    autoplay: true,
-    //    autoplaySpeed: 1500,
-    //    arrows: false,
-    //    centerMode: true,
-    //    lazyLoad: 'progressive',
-    //    infinite: true,
-    //    dots: true,
-    //    pauseOnDotsHover: true,
-    //    variableWidth: true,
-    //    responsive: [
-    //        {
-    //            breakpoint: 767,
-    //            settings: {
-    //                slidesToShow: 1,
-    //                slidesToScroll: 1,
-    //                infinite: true,
-    //                variableWidth: true
-    //            }
-    //        },
-    //        {
-    //            breakpoint: 360,
-    //            settings: {
-    //                slidesToShow: 1,
-    //                slidesToScroll: 1,
-    //                infinite: true,
-    //                variableWidth: true
-    //            }
-    //        }
-    //        // You can unslick at a given breakpoint now by adding:
-    //        // settings: "unslick"
-    //        // instead of a settings object
-    //    ]
-    //});
-
     var el, set, timeRemain, sliderContinue;
-
-
+    var win_h = $(window).height();
+    var header_height = $('.menu').outerHeight() + $('.banner').outerHeight();
     // App
     var Application = {
 
@@ -59,7 +21,6 @@ jQuery(document).ready(function($){
         init: function() {
             set = this.settings;
             el = this.elements;
-
 
             this.slider();
 
@@ -110,7 +71,7 @@ jQuery(document).ready(function($){
             //el.slider.on('beforeChange', function() {
             //    $('.slick-dots button').stop().width(0);
             //});
-            //
+
             //el.slider.on('afterChange', function() {
             //    $('.slick-dots button').width(0);
             //    Application.dotsAnimation();
@@ -123,25 +84,25 @@ jQuery(document).ready(function($){
          * @param remain {number}
          */
 
-        //dotsAnimation: function(remain) {
-        //
-        //    if (remain) {
-        //        var newDuration = remain;
-        //    } else {
-        //        var newDuration = set.sliderAutoplaySpeed;
-        //    }
-        //
-        //    $('.slick-dots .slick-active button').animate({ width: '100%' },
-        //        {
-        //            duration: newDuration,
-        //            easing: 'linear',
-        //            step: function(now, fx) {
-        //                var timeCurrent = Math.round((now*set.sliderAutoplaySpeed)/100);
-        //                timeRemain = set.sliderAutoplaySpeed - timeCurrent;
-        //            }
-        //        }
-        //    );
-        //}
+        dotsAnimation: function(remain) {
+
+            if (remain) {
+                var newDuration = remain;
+            } else {
+                var newDuration = set.sliderAutoplaySpeed;
+            }
+
+            $('.slick-dots .slick-active button').animate({ width: '100%' },
+                {
+                    duration: newDuration,
+                    easing: 'linear',
+                    step: function(now, fx) {
+                        var timeCurrent = Math.round((now*set.sliderAutoplaySpeed)/100);
+                        timeRemain = set.sliderAutoplaySpeed - timeCurrent;
+                    }
+                }
+            );
+        }
 
     };
 
@@ -152,13 +113,12 @@ jQuery(document).ready(function($){
 
 
     $(window).load(function() {
-        var win_h = $(window).height();
         $('.holding').height(win_h-3);
 
         //set width and height for block content
-        var height = $('.menu').outerHeight(true) + $('.banner').outerHeight(true);
-        $('.block-content').height(win_h - height);
-        $('.slick-slide .img-holder').height(win_h - height);
+        $('.block-content').height(win_h - header_height);
+        $('.slick-slide .img-holder').height(win_h - header_height);
+
     });
 
     $(window).resize(function() {
@@ -166,11 +126,36 @@ jQuery(document).ready(function($){
         $('.holding').height(win_h-3);
 
         //set width and height for block content
-        var height = $('.menu').Height() + $('.banner').Height();
-        $('.block-content').height(win_h - height);
+        $('.block-content').height(win_h - header_height);
 
-        $('.slick-slide .img-holder').height(win_h - height);
+        $('.slick-slide .img-holder').height(win_h - header_height);
 
+    });
+
+    $(window).scroll(function () {
+        var h = $(window).height() - header_height;
+        if ($(this).scrollTop() > h) {
+            $("header").css("opacity",1);
+        } else {
+            $("header").css("opacity",0);
+        }
+    }).resize();
+
+    $('.arrow-down').on('click', function () {
+        var target = $(this).attr('next');
+        if($('#block-content'+target).length){
+            $("body,html").animate({
+                scrollTop: $('#block-content'+target).offset().top - header_height
+            }, 1000);
+        }
+
+        return false;
+    });
+
+    $('#back_top').click(function(){
+        $('body,html').animate({
+            scrollTop: 0
+        }, 1000);
     });
 
 });

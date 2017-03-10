@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'FuturaBTBold';
+    src: url('futuraboldbt.eot');
+    src: url('futuraboldbt.eot') format('embedded-opentype'),
+         url('futuraboldbt.woff2') format('woff2'),
+         url('futuraboldbt.woff') format('woff'),
+         url('futuraboldbt.ttf') format('truetype'),
+         url('futuraboldbt.svg#FuturaBTBold') format('svg');
+}
+@font-face {
+    font-family: 'FuturaBTHeavyRegular';
+    src: url('futuraheavybt.eot');
+    src: url('futuraheavybt.eot') format('embedded-opentype'),
+         url('futuraheavybt.woff2') format('woff2'),
+         url('futuraheavybt.woff') format('woff'),
+         url('futuraheavybt.ttf') format('truetype'),
+         url('futuraheavybt.svg#FuturaBTHeavyRegular') format('svg');
+}
+@font-face {
+    font-family: 'FuturaBTLightRegular';
+    src: url('futuralightbt.eot');
+    src: url('futuralightbt.eot') format('embedded-opentype'),
+         url('futuralightbt.woff2') format('woff2'),
+         url('futuralightbt.woff') format('woff'),
+         url('futuralightbt.ttf') format('truetype'),
+         url('futuralightbt.svg#FuturaBTLightRegular') format('svg');
+}
+@font-face {
+    font-family: 'FuturaBTLightItalic';
+    src: url('futuralightitalicbt.eot');
+    src: url('futuralightitalicbt.eot') format('embedded-opentype'),
+         url('futuralightitalicbt.woff2') format('woff2'),
+         url('futuralightitalicbt.woff') format('woff'),
+         url('futuralightitalicbt.ttf') format('truetype'),
+         url('futuralightitalicbt.svg#FuturaBTLightItalic') format('svg');
+}
+@font-face {
+    font-family: 'FuturaBTBoldItalic';
+    src: url('futurabolditalicbt.eot');
+    src: url('futurabolditalicbt.eot') format('embedded-opentype'),
+         url('futurabolditalicbt.woff2') format('woff2'),
+         url('futurabolditalicbt.woff') format('woff'),
+         url('futurabolditalicbt.ttf') format('truetype'),
+         url('futurabolditalicbt.svg#FuturaBTBoldItalic') format('svg');
+}

@@ -1,69 +1,102 @@
-*{
-    margin-top: auto;
-}
-html,body{
-    max-width: 1920px;
-    /*margin-left: 2px;*/
-    /*font-family: "OpenSans-Regular";*/
-    /*background-color: #ffffff;*/
+html,body,h1,h2,h3,h4,h5,p,dd,dl,dt,div,hr,img{
+    margin:0;
+    padding:0;
+    border:0;
+    font-weight:normal;
+    font-size:18px;
+    font-family:'FuturaBTLightRegular',sans-serif;
+    line-height: 30px;
 }
 
-.container, header{
-    /*width: 100%;*/
+html, body {
+    max-width: 1920px;
+}
+
+.container, header {
     padding: 0;
     border: 1px solid #000000;
     margin-left: 2px;
     width: 99.9%;
 }
 
-.social{
-    height: 32px;
+.socials img {
+    height: 24px;
+    width: 40px;
     margin-top: 12px;
 }
 
-.menu, .holding, .block-content{
+.socials{
+    /*padding-left: 5%;*/
+}
+
+.menu, .holding, .block-content {
     border-bottom: 1px solid #000000;
 }
 
-header{
+header {
     z-index: 9999;
     position: fixed;
     left: 0;
     top: 0;
     background: #ffffff;
+    opacity: 0;
 }
 
-header .menu{
+header .menu {
     padding: 10px 20px 10px 20px;
 }
 
-header .humber{
-    float: right;
+header .menu img{
+    width: 60px;
 }
 
-header .banner{
+.menu .humber {
+    float: right;
+    width: 20px;
+    margin-top: 10px;
+}
+
+header .banner {
     padding: 30px 20px;
 }
 
-.holding-tab{
+header .banner .logo{
+    width: 160px;
+    float: left;
+    display: compact;
+}
+
+.holding-tab {
     display: table;
     width: 100%;
 }
 
-.holding-tab .holding{
+.holding-tab .holding {
     background: url("../img/holding-background.png");
     color: #ffffff;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
     width: 100%;
+    font-size: 30px;
 }
 
-.block-content{
+.holding-tab .holding h1{
+    font-size: 80px;
+    line-height: 80px;
+}
+
+.block-content {
     position: relative;
+    /*line-height: 40px;*/
 }
 
-.block-content .text{
+.block-content a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.block-content .text {
     color: #ffffff;
     font-size: 18px;
     margin-top: 65px;
@@ -71,15 +104,99 @@ header .banner{
     position: absolute;
 }
 
-.slick-slide .img-holder{
+.block-content .arrow-down{
+    background: url("../img/down-arrow.png") no-repeat;
+    background-position: 50% 50%;
+    position: absolute;
+    height: 32px;
+    width: 24px;
+    margin-left: 0.5%;
+    bottom: 5%;
+    cursor: pointer;
+}
+
+.slick-slide .img-holder {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
     margin-left: 0;
 }
 
-.block-content img{
-    /*height: 100%;*/
-    /*width: 100%;*/
+.slick-slider {
+    margin-bottom: 0;
+}
+
+.slick-dots {
+    margin-bottom: 50px;
+}
+
+.slick-dots li button {
+    border: 0;
+    background: url("../img/slick-dot.png") no-repeat;
+    background-position: 50% 50%;
+    display: block;
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    outline: none;
+    line-height: 0;
+    font-size: 0;
+    color: transparent;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.slick-dots li button:before {
+    content: "";
+}
+
+.slick-dots .slick-active button {
+    border: 0;
+    background: url("../img/slick-dot-active.png") no-repeat;
+    background-position: 50% 50%;
+}
+
+footer{
+    background: #ffffff;
+}
+
+footer h3{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+footer h2{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+footer .wrapper{
+    padding: 40px;
+    margin-top: 110px;
+}
+
+footer .client{
+    text-align: center;
+    padding: 80px 20px;
+}
+
+footer .client img{
+    height: 60px;
+}
+
+footer .New-object a{
+    color: #030303;
+    text-decoration: underline;
+}
+
+footer .bottom{
+    background: url("../img/footer-bottom-bg.png");
+    color: #ffffff;
+    padding: 40px;
+}
+
+footer .bottom a{
+    color: #ffffff;
+    text-decoration: underline;
 }
 
