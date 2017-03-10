@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	
     $('.slick-client').slick({
         slidesToShow: 3,
         slidesToScroll: 1,
