@@ -20,13 +20,11 @@ html, body {
 }
 
 .socials img {
-    height: 24px;
-    width: 40px;
     margin-top: 12px;
 }
 
 .socials{
-    /*padding-left: 5%;*/
+    padding-left: 5%;
 }
 
 .menu, .holding, .block-content {

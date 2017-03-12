@@ -1,0 +1,24 @@
+html,body,h1,h2,h3,h4,h5,p,dd,dl,dt,div,hr,img{
+  margin:0;
+  padding:0;
+  border:0;
+  font-weight:normal;
+  font-size:18px;
+  font-family:'FuturaBTLightRegular',sans-serif;
+  line-height: 30px;
+}
+
+html, body {
+  max-width: 1920px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.link{
+  border-bottom: 1px solid #ffffff;
+  display: inline-block;
+}
+
+$global_border_color: #000000;
