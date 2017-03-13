@@ -25,13 +25,19 @@ html h2, body h2 {
 /* line 30, ../scss/_global.scss */
 a {
   text-decoration: none; }
+  /* line 32, ../scss/_global.scss */
+  a:hover {
+    text-decoration: none; }
 
-/* line 34, ../scss/_global.scss */
+/* line 37, ../scss/_global.scss */
 .link {
   border-bottom: 1px solid #ffffff;
   display: inline-block; }
+  /* line 40, ../scss/_global.scss */
+  .link a {
+    color: #ffffff; }
 
-/* line 39, ../scss/_global.scss */
+/* line 45, ../scss/_global.scss */
 .link_bottom {
   border-bottom: 1px solid #030303;
   display: inline-block; }

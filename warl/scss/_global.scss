@@ -29,11 +29,17 @@ $global_box_shadow: 0 5px 9px #888888;
 
 a{
   text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
 }
 
 .link{
   border-bottom: 1px solid $global_color_white;
   display: inline-block;
+  a{
+    color: $global_color_white;
+  }
 }
 
 .link_bottom{
