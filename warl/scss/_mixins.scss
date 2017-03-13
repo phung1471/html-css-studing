@@ -1,3 +1,18 @@
-@mixin mix_border{
-  border: 1px solid $global_border_color;
+@mixin mix_header_humber{
+  float: right;
+  height: 24px;
+  width: 24px;
+  margin-top: 10px;
+}
+
+@mixin mix_background_transition{
+  transition: background 0.4s ease-out;
+  -o-transition: background 0.4s ease-out;
+  -moz-transition: background 0.4s ease-out;
+  -webkit-transition: background 0.4s ease-out;
+}
+
+@mixin mix_bg_full_div{
+  background-position: 50% 50%;
+  background-size: cover;
 }

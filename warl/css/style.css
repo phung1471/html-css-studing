@@ -1,200 +1,198 @@
-html,body,h1,h2,h3,h4,h5,p,dd,dl,dt,div,hr,img{
-    margin:0;
-    padding:0;
-    border:0;
-    font-weight:normal;
-    font-size:18px;
-    font-family:'FuturaBTLightRegular',sans-serif;
-    line-height: 30px;
-}
-
+/* line 1, ../scss/_global.scss */
 html, body {
-    max-width: 1920px;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-weight: normal;
+  font-size: 18px;
+  font-family: 'FuturaBTLightRegular',sans-serif;
+  line-height: 30px; }
 
+/* line 11, ../scss/_global.scss */
+html h3, body h3 {
+  font-size: 24px;
+  font-weight: bold; }
+
+/* line 16, ../scss/_global.scss */
+html h2, body h2 {
+  font-size: 28px;
+  font-weight: bold; }
+
+/* line 26, ../scss/_global.scss */
 .container, header {
-    padding: 0;
-    border: 1px solid #000000;
-    margin-left: 2px;
-    width: 99.9%;
-}
+  min-width: 320px; }
 
-.socials img {
-    margin-top: 12px;
-}
+/* line 30, ../scss/_global.scss */
+a {
+  text-decoration: none; }
 
-.socials{
-    padding-left: 5%;
-}
+/* line 34, ../scss/_global.scss */
+.link {
+  border-bottom: 1px solid #ffffff;
+  display: inline-block; }
 
-.menu, .holding, .block-content {
-    border-bottom: 1px solid #000000;
-}
+/* line 39, ../scss/_global.scss */
+.link_bottom {
+  border-bottom: 1px solid #030303;
+  display: inline-block; }
 
-header {
-    z-index: 9999;
-    position: fixed;
-    left: 0;
-    top: 0;
-    background: #ffffff;
-    opacity: 0;
-}
+/* line 1, ../scss/_header.scss */
+.container, header {
+  padding: 0;
+  border: 1px solid #030303;
+  margin-left: 2px;
+  width: 99.6%; }
 
-header .menu {
-    padding: 10px 20px 10px 20px;
-}
-
-header .menu img{
-    width: 60px;
-}
-
-.menu .humber {
-    float: right;
-    width: 20px;
-    margin-top: 10px;
-}
-
-header .banner {
-    padding: 30px 20px;
-}
-
-header .banner .logo{
-    width: 160px;
-    float: left;
-    display: compact;
-}
-
+/* line 8, ../scss/_header.scss */
 .holding-tab {
-    display: table;
-    width: 100%;
-}
-
-.holding-tab .holding {
+  display: table;
+  width: 100%; }
+  /* line 12, ../scss/_header.scss */
+  .holding-tab .holding {
+    border-bottom: 1px solid #030303;
+    padding: 10px 20px 10px 20px;
     background: url("../img/holding-background.png");
     color: #ffffff;
     text-align: center;
     display: table-cell;
     vertical-align: middle;
     width: 100%;
-    font-size: 30px;
-}
+    font-size: 30px; }
+    /* line 22, ../scss/_header.scss */
+    .holding-tab .holding h1 {
+      font-size: 80px;
+      line-height: 80px; }
 
-.holding-tab .holding h1{
-    font-size: 80px;
-    line-height: 80px;
-}
+/* line 29, ../scss/_header.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #ffffff;
+  z-index: 999;
+  opacity: 0; }
+  /* line 37, ../scss/_header.scss */
+  header .menu {
+    border-bottom: 1px solid #030303;
+    padding: 10px 20px 10px 20px; }
+    /* line 40, ../scss/_header.scss */
+    header .menu img {
+      margin-top: 10px; }
+    /* line 43, ../scss/_header.scss */
+    header .menu .dropdown {
+      float: right; }
+      /* line 45, ../scss/_header.scss */
+      header .menu .dropdown .dropdown-menu {
+        border: 1px solid #030303;
+        margin-top: 15px;
+        margin-left: -127px;
+        border-radius: 0;
+        box-shadow: 0 5px 9px #888888; }
+        /* line 53, ../scss/_header.scss */
+        header .menu .dropdown .dropdown-menu li a:hover {
+          color: #ffffff;
+          background: #030303; }
+      /* line 61, ../scss/_header.scss */
+      header .menu .dropdown .humber {
+        float: right;
+        height: 24px;
+        width: 24px;
+        margin-top: 10px;
+        background: url("../img/humber-icon.png") no-repeat;
+        background-size: 100%; }
+    /* line 68, ../scss/_header.scss */
+    header .menu .open .humber {
+      float: right;
+      height: 24px;
+      width: 24px;
+      margin-top: 10px;
+      background: url("../img/open-icon.png") no-repeat;
+      background-size: 100%; }
+  /* line 76, ../scss/_header.scss */
+  header .banner {
+    padding: 30px 20px; }
+    /* line 78, ../scss/_header.scss */
+    header .banner .logo {
+      width: 160px;
+      float: left; }
+    /* line 82, ../scss/_header.scss */
+    header .banner .socials {
+      padding-left: 5%;
+      float: right; }
+      /* line 85, ../scss/_header.scss */
+      header .banner .socials img {
+        margin-right: 15px; }
 
-.block-content {
-    position: relative;
-    /*line-height: 40px;*/
-}
+/* line 1, ../scss/_section.scss */
+section {
+  border-bottom: 1px solid #030303; }
+  /* line 4, ../scss/_section.scss */
+  section .wrapper-content .block-content {
+    position: relative; }
+    /* line 6, ../scss/_section.scss */
+    section .wrapper-content .block-content a {
+      color: #ffffff; }
+    /* line 12, ../scss/_section.scss */
+    section .wrapper-content .block-content .text {
+      color: #ffffff;
+      margin-top: 65px;
+      margin-left: 45px; }
+    /* line 17, ../scss/_section.scss */
+    section .wrapper-content .block-content .arrow-down {
+      background: url("../img/down-arrow.png") no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      height: 32px;
+      width: 24px;
+      margin-left: 20px;
+      bottom: 20px;
+      cursor: pointer;
+      position: absolute; }
+    /* line 27, ../scss/_section.scss */
+    section .wrapper-content .block-content .item {
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: cover;
+      margin-left: 0; }
 
-.block-content a{
-    color: #ffffff;
-    text-decoration: underline;
-}
-
-.block-content .text {
-    color: #ffffff;
-    font-size: 18px;
-    margin-top: 65px;
-    margin-left: 45px;
-    position: absolute;
-}
-
-.block-content .arrow-down{
-    background: url("../img/down-arrow.png") no-repeat;
-    background-position: 50% 50%;
-    position: absolute;
-    height: 32px;
-    width: 24px;
-    margin-left: 0.5%;
-    bottom: 5%;
-    cursor: pointer;
-}
-
-.slick-slide .img-holder {
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: cover;
-    margin-left: 0;
-}
-
-.slick-slider {
-    margin-bottom: 0;
-}
-
-.slick-dots {
-    margin-bottom: 50px;
-}
-
-.slick-dots li button {
-    border: 0;
-    background: url("../img/slick-dot.png") no-repeat;
-    background-position: 50% 50%;
-    display: block;
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    outline: none;
-    line-height: 0;
-    font-size: 0;
-    color: transparent;
-    padding: 5px;
-    cursor: pointer;
-}
-
-.slick-dots li button:before {
-    content: "";
-}
-
-.slick-dots .slick-active button {
-    border: 0;
-    background: url("../img/slick-dot-active.png") no-repeat;
-    background-position: 50% 50%;
-}
-
-footer{
-    background: #ffffff;
-}
-
-footer h3{
-    font-size: 24px;
-    font-weight: bold;
-}
-
-footer h2{
-    font-size: 28px;
-    font-weight: bold;
-}
-
-footer .wrapper{
+/* line 1, ../scss/_fotter.scss */
+footer {
+  background: #ffffff; }
+  /* line 3, ../scss/_fotter.scss */
+  footer .wrapper {
     padding: 40px;
-    margin-top: 110px;
-}
-
-footer .client{
+    margin-top: 110px; }
+  /* line 7, ../scss/_fotter.scss */
+  footer .client {
     text-align: center;
-    padding: 80px 20px;
-}
-
-footer .client img{
-    height: 60px;
-}
-
-footer .New-object a{
-    color: #030303;
-    text-decoration: underline;
-}
-
-footer .bottom{
+    padding: 80px 20px; }
+    /* line 10, ../scss/_fotter.scss */
+    footer .client img {
+      height: 60px; }
+  /* line 14, ../scss/_fotter.scss */
+  footer .New-object {
+    text-align: center; }
+    /* line 16, ../scss/_fotter.scss */
+    footer .New-object a {
+      color: #030303; }
+  /* line 21, ../scss/_fotter.scss */
+  footer .bottom {
     background: url("../img/footer-bottom-bg.png");
     color: #ffffff;
-    padding: 40px;
-}
+    padding: 40px; }
 
-footer .bottom a{
-    color: #ffffff;
-    text-decoration: underline;
-}
-
+@media (max-width: 1199px) {
+  /* line 3, ../scss/_media.scss */
+  footer .client {
+    padding: 20px; } }
+@media (max-width: 767px) {
+  /* line 12, ../scss/_media.scss */
+  header .banner ._xs-justify-center {
+    display: flex;
+    justify-content: center; }
+  /* line 16, ../scss/_media.scss */
+  header .banner .socials {
+    margin-top: 10px; }
+    /* line 18, ../scss/_media.scss */
+    header .banner .socials img {
+      margin-right: 10px; } }

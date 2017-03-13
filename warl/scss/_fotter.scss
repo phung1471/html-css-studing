@@ -1,0 +1,26 @@
+footer {
+  background: $global_color_white;
+  .wrapper {
+    padding: 40px;
+    margin-top: 110px;
+  }
+  .client {
+    text-align: center;
+    padding: 80px 20px;
+    img {
+      height: 60px;
+    }
+  }
+  .New-object {
+    text-align: center;
+    a {
+      color: #030303;
+    }
+  }
+
+  .bottom{
+    background: url("../img/footer-bottom-bg.png");
+    color: $global_color_white;
+    padding: 40px;
+  }
+}

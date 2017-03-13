@@ -1,0 +1,24 @@
+@media (max-width: 1199px) {
+  footer{
+    .client{
+      padding: 20px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  header {
+    .banner {
+      ._xs-justify-center{
+        display: flex;
+        justify-content: center;
+      }
+      .socials {
+        margin-top: 10px;
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-html,body,h1,h2,h3,h4,h5,p,dd,dl,dt,div,hr,img{
+html, body{
   margin:0;
   padding:0;
   border:0;
@@ -8,8 +8,23 @@ html,body,h1,h2,h3,h4,h5,p,dd,dl,dt,div,hr,img{
   line-height: 30px;
 }
 
-html, body {
-  max-width: 1920px;
+html h3, body h3{
+  font-size: 24px;
+  font-weight: bold;
+}
+
+html h2, body h2{
+  font-size: 28px;
+  font-weight: bold;
+}
+
+$global_color_white: #ffffff;
+$global_padding: 10px 20px 10px 20px;
+$global_border: 1px solid #030303;
+$global_box_shadow: 0 5px 9px #888888;
+
+.container{
+  min-width: 320px;
 }
 
 a{
@@ -17,8 +32,11 @@ a{
 }
 
 .link{
-  border-bottom: 1px solid #ffffff;
+  border-bottom: 1px solid $global_color_white;
   display: inline-block;
 }
 
-$global_border_color: #000000;
+.link_bottom{
+  border-bottom: 1px solid #030303;
+  display: inline-block;
+}

@@ -1,0 +1,35 @@
+section{
+  border-bottom: $global_border;
+  .wrapper-content{
+    .block-content /*.carousel*/{
+      position: relative;
+      a{
+        color: $global_color_white;
+      }
+      .carousel{
+
+      }
+      .text {
+        color: $global_color_white;
+        margin-top: 65px;
+        margin-left: 45px;
+      }
+      .arrow-down{
+        background: url("../img/down-arrow.png") no-repeat;
+        @include mix_bg_full_div;
+        height: 32px;
+        width: 24px;
+        margin-left: 20px;
+        bottom: 20px;
+        cursor: pointer;
+        position: absolute;
+      }
+      .item {
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+        background-size: cover;
+        margin-left: 0;
+      }
+    }
+  }
+}
