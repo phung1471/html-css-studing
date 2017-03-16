@@ -11,18 +11,19 @@
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 </head>
 
 <body>
 <header>
     <div class="row">
-        <div class="logo col-sm-3">
+        <div class="logo col-xs-3">
             <a href="./"><img src="img/logo.png" alt="logo"/></a>
         </div>
-        <div class="menu col-sm-9">
+        <div class="menu col-xs-9">
             <nav class="main-nav hidden-xs">
-                <a class="current" href="#">ONLINE STORE</a><span>|</span>
-                <a href="#">GO TO MAIN SITE</a>
+                <span class="site_title red">ONLINE STORE</span>
+                <a href="#"> <span class="arrow">GO TO MAIN SITE</span></a>
             </nav>
             <div class="mobile-nav visible-xs">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -34,8 +35,8 @@
                 </button>
                 <nav id="navbar" class="navigation collapse navbar-collapse">
                     <ul>
-                        <li class="site_title"><a href="#">ONLINE STORE</a></li>
-                        <li class="main_site"><a href="#"><span class="arrow">GO TO MAIN SITE</span></a></li>
+                        <li><span class="red">ONLINE STORE</span></li>
+                        <li><a href="#">GO TO MAIN SITE</a></li>
                     </ul>
                 </nav>
             </div>
@@ -44,11 +45,23 @@
 </header>
 
 <section class="container">
-    <div class="banner" style="background: url(img/top-banner.png) no-repeat; background-size: cover">
-        <p>Relive the <span class="red">RedDot</span> Experience
-            Anytime, Anywhere</p>
-        <img src="img/top-banner.png" alt="banner" style="visibility: hidden;"/>
+    <div class="banner-wrapper">
+        <div id="banner" class="banner" style="background: url(img/top-banner.png) no-repeat; background-size: cover">
+            <div class="row">
+                <div class="col-sm-5 middle">
+                    <img class="hidden-xs" src="img/top-banner.png" alt="banner" style="visibility: hidden;"/>
+                </div>
+
+                <div class="col-sm-6 size48 middle">
+                    <div class="text-content">
+                        <p>Relive the <span class="red">RedDot</span> Experience
+                            Anytime, Anywhere</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
 
     <div class="wrapper row">
         <div class="sidebar col-sm-2">
