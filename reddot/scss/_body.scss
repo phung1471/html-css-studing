@@ -3,8 +3,121 @@ section {
     padding: 5px;
     border: 1px solid #7c7c7c;
     .banner {
+      min-height: 180px;
       .text-content {
         font-size: 43px;
+      }
+    }
+  }
+  .wrapper{
+    margin-top: 70px;
+    .sidebar{
+      text-align: center;
+      font-size: 24px;
+      .category{
+        .cat_title{
+          line-height: 50px;
+          @include bor_bot_c(#ffffff);
+          padding-bottom: 30px;
+          display: block;
+        }
+      }
+      ul{
+        margin-top: 60px;
+        li{
+          margin-bottom: 30px;
+        }
+      }
+    }
+    .product_wrapper{
+      padding-left: 96px;
+      .pro_header{
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+        font-size: 36px;
+        line-height: 50px;
+        @include bor_bot_c(#b62424);
+        .arrow{
+          padding-right: 40px;
+          margin-right: 20px;
+        }
+      }
+      ul{
+        li{
+          margin-bottom: 60px;
+          .p-item{
+//            max-width: 300px;
+            width: 80%;
+            text-align: center;
+            display: inline-block;
+            img{
+              width: 100%;
+            }
+            .p-info{
+            }
+            .btn{
+              border: 1px solid #3f3f3f;
+              font-style: italic;
+              background: #1d1d1d;
+              a{
+                color: $text-red;
+              }
+            }
+          }
+          .i-left{
+            float: left;
+          }
+          .i-right{
+            float: right;
+          }
+        }
+      }
+      .i-middle{
+        text-align: center;
+      }
+    }
+  }
+}
+
+//one columns
+@media (max-width: 767px) {
+  section{
+    .wrapper{
+      .product_wrapper{
+        padding-left: 10px;
+        padding-right: 10px;
+        ul{
+          text-align: center;
+          li{
+            display: block;
+            .i-left,.i-right{
+              float: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//two columns
+@media (max-width: 1199px) {
+  section{
+    .wrapper{
+      .product_wrapper{
+        ul{
+          text-align: center;
+          li{
+            display: inline-block;
+            .i-left,.i-right{
+              float: none;
+            }
+            .p-item{
+              float: none;
+              width: 100%;
+            }
+          }
+        }
       }
     }
   }

@@ -87,3 +87,7 @@
   -o-background-size: $size;
   background-size: $size;
 }
+
+@mixin bor_bot_c ($color){
+  border-bottom: 1px solid $color;
+}

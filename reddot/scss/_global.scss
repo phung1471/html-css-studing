@@ -1,54 +1,57 @@
-@import url(http://fonts.googleapis.com/css?family=Unna);//font-family: 'Neuton', serif;
-@import url(http://fonts.googleapis.com/css?family=Neuton:300,400,400italic);//font-family: 'Unna', serif;
+@import url(http://fonts.googleapis.com/css?family=Unna);
+//font-family: 'Neuton', serif;
+@import url(http://fonts.googleapis.com/css?family=Neuton:300,400,400italic);
 
-.container{
+//font-family: 'Unna', serif;
+
+.container {
   max-width: 1124px;
 }
 
-a{
+a {
   color: $c-white;
   &:focus,
-  &:hover{
+  &:hover {
     color: #afaeaa;
     text-decoration: none;
   }
   &[href^=tel],
-  &[href^=mailto]{
+  &[href^=mailto] {
     text-decoration: none;
   }
 }
 
-.spacing{
-  &10{
+.spacing {
+  &10 {
     height: 10px;
   }
-  &20{
+  &20 {
     height: 20px;
   }
-  &30{
+  &30 {
     height: 30px;
   }
-  &50{
+  &50 {
     height: 50px;
   }
-  &100{
+  &100 {
     height: 100px;
   }
 }
 
-p{
+p {
   margin-bottom: 30px;
 }
 
-.red{
-  color: $text-red;
+.red {
+  color: $text-red !important;
 }
 
-.grey{
+.grey {
   color: $text-grey;
 }
 
-.arrow{
+.arrow {
   background: url("../img/red-arrow.png") no-repeat right;
 }
 
@@ -56,4 +59,15 @@ p{
   display: inline-block;
   vertical-align: middle;
   float: none;
+}
+
+//ul none style list
+.none-style {
+  padding: 0;
+  list-style: none;
+}
+
+.no-padding {
+  padding: 0 !important;
+  margin: 0 !important;
 }
