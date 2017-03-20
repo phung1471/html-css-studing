@@ -88,6 +88,12 @@
   background-size: $size;
 }
 
+@mixin select(){
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 @mixin bor_bot_c ($color){
   border-bottom: 1px solid $color;
 }

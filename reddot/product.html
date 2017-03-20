@@ -11,18 +11,19 @@
 
     <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/custom.js"></script>
 </head>
 
 <body>
 <header>
     <div class="row">
-        <div class="logo col-sm-3">
+        <div class="logo col-xs-3">
             <a href="./"><img src="img/logo.png" alt="logo"/></a>
         </div>
-        <div class="menu col-sm-9">
+        <div class="menu col-xs-9">
             <nav class="main-nav hidden-xs">
-                <a class="current" href="#">ONLINE STORE</a><span>|</span>
-                <a href="#">GO TO MAIN SITE</a>
+                <span class="site_title red">ONLINE STORE</span>
+                <a href="#"> <span class="arrow">GO TO MAIN SITE</span></a>
             </nav>
             <div class="mobile-nav visible-xs">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -34,7 +35,7 @@
                 </button>
                 <nav id="navbar" class="navigation collapse navbar-collapse">
                     <ul>
-                        <li class="active"><a href="#">ONLINE STORE</a></li>
+                        <li><span class="red">ONLINE STORE</span></li>
                         <li><a href="#">GO TO MAIN SITE</a></li>
                     </ul>
                 </nav>
@@ -44,7 +45,78 @@
 </header>
 
 <section class="container">
-    Hello world!
+    <div class="wrapper row">
+        <div class="p-img col-sm-4 col-sm-offset-1">
+            <img src="img/product.png" alt="product"/>
+        </div>
+        <div class="col-sm-6">
+            <form class="frm_addcart" action="#" method="get">
+                <div class="col-xs-12 row">
+                    <div class="pro_title">
+                        <h1>Lorem ipsum doloresit consectetur</h1>
+                    </div>
+                    <span class="cat_grey">Category: Beer</span>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
+                        eget accumsan massa. Nullam ac dui congue, mattis sem vitae, consectetur elit.</p>
+                </div>
+
+                <div class="p-info row">
+                    <div class="col-md-4">
+                        Price
+                    </div>
+                    <div class="col-md-8">
+                        $200.00
+                    </div>
+                </div>
+                <div class="p-info row">
+                    <div class="col-md-4">
+                        Beer Type
+                    </div>
+                    <div class="col-md-8">
+                        <select name="beer_type">
+                            <option value="1">Czech Pilsner 1</option>
+                            <option value="2">Czech Pilsner 2</option>
+                            <option value="3">Czech Pilsner 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="p-info row">
+                    <div class="col-md-4">
+                        Quantity
+                    </div>
+                    <div class="col-md-8">
+                        <input type="text" name="quantity"/>
+                    </div>
+                </div>
+                <div class="p-info row">
+                    <div class="col-md-4">
+                        Delivery Option
+                    </div>
+                    <div class="col-md-8">
+                        <select name="delivery">
+                            <option value="1">Delivery 1</option>
+                            <option value="2">Delivery 2</option>
+                            <option value="3">Delivery 3</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="p-info row">
+                    <div class="col-md-4">
+                        Deposit
+                    </div>
+                    <div class="col-md-8">
+                        $50.00
+                    </div>
+                </div>
+                <div class="p-info row">
+                    <div class="col-md-4">
+                        <button>Add to Cart</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 </section>
 
 <footer>

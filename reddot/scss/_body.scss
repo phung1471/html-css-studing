@@ -1,4 +1,5 @@
 section {
+
   .banner-wrapper {
     padding: 5px;
     border: 1px solid #7c7c7c;
@@ -10,7 +11,8 @@ section {
     }
   }
   .wrapper{
-    margin-top: 70px;
+    margin-top: 30px;
+    //home
     .sidebar{
       text-align: center;
       font-size: 24px;
@@ -74,6 +76,66 @@ section {
       }
       .i-middle{
         text-align: center;
+      }
+    }
+
+    //add to cart
+    .p-img{
+      img{
+        width: 90%;
+        border: 1px solid $bor_grey;
+        margin-bottom: 30px;
+      }
+    }
+    .frm_addcart{
+      font-size: 20px;
+      select{
+        @include select;
+        padding: 0 10px;
+        width: 80%;
+        height: 40px;
+        border: 1px solid $bor_grey;
+        background: url("../img/arrow-down.png") no-repeat right;
+        background-color: #393939;
+        &>option{
+          border: none;
+          width: 100%;
+          height: 40px;
+          border-bottom: 1px solid #efefef;
+          background: #ffffff;
+          color: #393939;
+          &:hover{
+            background: #f0f0f0;
+          }
+          &:active{
+            background: #f0f0f0;
+          }
+        }
+      }
+      input{
+        width: 25%;
+        height: 40px;
+        border: 1px solid $bor_grey;
+        background-color: #393939;
+        padding: 0 10px;
+      }
+      button{
+        background: #de2f2f;
+        border: none;
+        padding: 10px 35px;
+        &:active{
+          background: #6d1919;
+        }
+      }
+      .pro_title{
+        @include bor_bot_c($bor_grey);
+        margin-bottom: 30px;
+        h1{
+          line-height: 28px;
+        }
+      }
+      .p-info{
+        padding: 10px 0;
       }
     }
   }
