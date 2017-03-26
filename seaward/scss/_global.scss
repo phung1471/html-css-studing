@@ -1,0 +1,37 @@
+html, body{
+  background: #ffffff;
+}
+
+.container{
+  max-width: 960px;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  &:hover{
+    color: $orange;
+    text-decoration: none;
+  }
+}
+
+.ul-no-style{
+  list-style: none;
+  padding: 0;
+}
+
+.btn-org{
+  @include border-radius-circle(5px);
+  background: $orange url('../img/arrow_left.png') no-repeat center right;
+  color: $white;
+  border: 1px solid $orange;
+  padding-right: 40px;
+  :hover{
+    background: $white url("../img/arrow_left2.png") no-repeat center right;
+    color: $orange;
+  }
+}
+
+.orange{
+  color: $orange;
+}

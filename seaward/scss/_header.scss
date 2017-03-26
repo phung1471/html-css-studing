@@ -1,0 +1,100 @@
+.seaward-header{
+  border-top: 5px solid $orange;
+  padding-top: 20px;
+  .wrapper{
+    padding-bottom: 10px;
+    .logo{
+      z-index: 999;
+      position: relative;
+      img{
+        position: relative;
+        z-index: 9999;
+        float: right;
+        margin-right: 35px;
+      }
+      .top-bottom{
+        height: 23px;
+        width: 1000%;
+        position: absolute;
+        bottom: -12px;
+        right: 42px;
+        z-index: 99;
+        background: #ffff;
+      }
+      .slun{
+        height: 23px;
+        width: 42px;
+        background: url("../img/white_slunt.png") no-repeat right;
+        position: absolute;
+        bottom: -12px;
+        right: 0;
+      }
+    }
+    .menu{
+      margin-top: 30px;
+      font-size: 15px;
+      .hambur{
+        width: 35px;
+        height: 25px;
+        margin-right: 10px;
+        float: right;
+        &[aria-expanded^=true]{
+          border: 1px solid $orange;
+          @include border-radius-circle(5px)
+        }
+        span{
+          width: 30px;
+          height: 5px;
+          background: #5F5F5F;
+          margin: 2px;
+          @include border-radius-circle(5px);
+          display: block;
+        }
+        &:hover{
+          cursor: pointer;
+        }
+      }
+      .nav-mobile{
+        right: 45px;
+        a{
+          @extend a;
+        }
+      }
+      .nav-desktop{
+        padding: 0;
+        ul{
+          padding: 0;
+          li{
+            float: left;
+            a{
+              @extend a;
+            }
+            span{
+              padding: 0 10px;
+            }
+          }
+        }
+
+      }
+    }
+  }
+  #slider{
+    top: -20px;
+    ol{
+      li{
+        background: $white;
+        border: none;
+      }
+      .active{
+        background: $orange;
+      }
+    }
+    .carousel-inner{
+      .item{
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}
