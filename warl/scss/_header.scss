@@ -5,7 +5,7 @@
   width: 99.6%;
 }
 
-.holding-tab {
+/*.holding-tab {
   display: table;
   width: 100%;
 
@@ -24,7 +24,7 @@
       line-height: 80px;
     }
   }
-}
+}*/
 
 header {
   @extend .container;
@@ -33,7 +33,7 @@ header {
   left: 0;
   background: $global_color_white;
   z-index: 999;
-  opacity: 0;
+  /*opacity: 0;*/
   .menu {
     border-bottom: $global_border;;
     padding: $global_padding;

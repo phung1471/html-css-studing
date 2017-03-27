@@ -25,9 +25,9 @@ jQuery(document).ready(function($){
     $(window).scroll(function () {
         var h = $(window).height() - header_height;
         if ($(this).scrollTop() > h) {
-            $("header").css("opacity",1);
+            //$("header").css("opacity",1);
         } else {
-            $("header").css("opacity",0);
+            //$("header").css("opacity",0);
         }
     }).resize();
 

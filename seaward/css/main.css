@@ -129,3 +129,15 @@ a, .seaward-header .wrapper .menu .nav-mobile a, .seaward-header .wrapper .menu 
     /* line 94, ../scss/_header.scss */
     .seaward-header #slider .carousel-inner .item img {
       width: 100%; }
+    /* line 97, ../scss/_header.scss */
+    .seaward-header #slider .carousel-inner .item .text-wrapper {
+      height: 100%; }
+      /* line 99, ../scss/_header.scss */
+      .seaward-header #slider .carousel-inner .item .text-wrapper .slide-text {
+        position: absolute;
+        top: 30%;
+        padding: 0 30px;
+        max-width: 960px;
+        font-weight: bold;
+        color: #F18D2B;
+        font-size: 16px; }
