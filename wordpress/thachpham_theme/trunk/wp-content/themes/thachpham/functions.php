@@ -20,7 +20,7 @@ if (!isset($content_width)) {
     /*
      * Nếu biến $content_width chưa có dữ liệu thì gán giá trị cho nó
      */
-    $content_width = 620;
+    $content_width = 960;
 }
 
 /**
@@ -97,35 +97,81 @@ if (!function_exists('thachpham_theme_setup')) {
 
 }
 
+if (!function_exists('thachpham_header')) {
+    function thachpham_header() { ?>
+        <div class="site-name">
+            <?php
+            global $tp_options;
+
+            if( $tp_options['logo-on'] == 0 ) :
+                ?>
+                <?php
+                if ( is_home() ) {
+                    printf( '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+                        get_bloginfo('url'),
+                        get_bloginfo('description'),
+                        get_bloginfo('sitename') );
+                } else {
+                    printf( '<p><a href="%1$s" title="%2$s">%3$s</a></p>',
+                        get_bloginfo('url'),
+                        get_bloginfo('description'),
+                        get_bloginfo('sitename') );
+                }
+                ?>
+
+            <?php
+            else :
+                ?>
+                <img src="<?php echo $tp_options['logo-image']['url']; ?>" />
+            <?php endif; ?>
+        </div>
+        <div class="site-description"><?php bloginfo('description'); ?></div><?php
+    }
+}
+
 /**
 @ Thiết lập hàm hiển thị logo
 @ thachpham_logo()
  **/
 if ( ! function_exists( 'thachpham_logo' ) ) {
     function thachpham_logo() {?>
-        <div class="logo">
+        <?php
+        global $tp_options;
+        ?>
 
-            <div class="site-name">
-                <?php if ( is_home() ) {
-                    printf(
-                        '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
-                        get_bloginfo( 'url' ),
-                        get_bloginfo( 'description' ),
-                        get_bloginfo( 'sitename' )
-                    );
-                } else {
-                    printf(
-                        '<p><a href="%1$s" title="%2$s">%3$s</a></p>',
-                        get_bloginfo( 'url' ),
-                        get_bloginfo( 'description' ),
-                        get_bloginfo( 'sitename' )
-                    );
-                } // endif ?>
+        <?php if ( $tp_options['logo-on'] == 1 ) : ?>
+
+            <div class="logo">
+                <img src="<?php echo $tp_options['logo-image']['url']; ?>">
             </div>
-            <div class="site-description"><?php bloginfo( 'description' ); ?></div>
 
-        </div>
-    <?php }
+        <?php else : ?>
+
+            <div class="logo">
+
+                <div class="site-name">
+                    <?php if ( is_home() ) {
+                        printf(
+                            '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
+                            get_bloginfo( 'url' ),
+                            get_bloginfo( 'description' ),
+                            get_bloginfo( 'sitename' )
+                        );
+                    } else {
+                        printf(
+                            '<a href="%1$s" title="%2$s">%3$s</a>',
+                            get_bloginfo( 'url' ),
+                            get_bloginfo( 'description' ),
+                            get_bloginfo( 'sitename' )
+                        );
+                    } // endif ?>
+                </div>
+                <div class="site-description"><?php bloginfo( 'description' ); ?></div>
+
+            </div>
+
+        <?php endif;
+     }
 }
 
 /**

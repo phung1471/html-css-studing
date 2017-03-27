@@ -1,12 +1,12 @@
-var wpAjaxUrl = 'http://wptest.wp/wp-admin/admin-ajax.php';var flBuilderUrl = 'http://wptest.wp/wp-content/plugins/beaver-builder-lite-version/';var FLBuilderLayoutConfig = {
+var wpAjaxUrl = 'http://theme.wp/wp-admin/admin-ajax.php';var flBuilderUrl = 'http://theme.wp/wp-content/plugins/beaver-builder-lite-version/';var FLBuilderLayoutConfig = {
 	anchorLinkAnimations : {
 		duration 	: 1000,
 		easing		: 'swing',
 		offset 		: 100
 	},
 	paths : {
-		pluginUrl : 'http://wptest.wp/wp-content/plugins/beaver-builder-lite-version/',
-		wpAjaxUrl : 'http://wptest.wp/wp-admin/admin-ajax.php'
+		pluginUrl : 'http://theme.wp/wp-content/plugins/beaver-builder-lite-version/',
+		wpAjaxUrl : 'http://theme.wp/wp-admin/admin-ajax.php'
 	}
 };(function($){
 
