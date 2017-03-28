@@ -1,0 +1,88 @@
+---
+Name: app
+After: silvershop/config#shopconfig
+---
+CheckoutConfig:
+  member_creation_enabled: true
+  membership_required: true
+
+Email:
+  admin_email: example@example.com
+
+i18n:
+  default_locale: en_NZ
+
+Order:
+  modifiers:
+    - 'SimpleShippingModifier'
+    - 'FlatTaxModifier'
+  cancel_before_payment: false
+  cancel_before_processing: false
+  cancel_before_sending: false
+  cancel_before_sending: false
+  cancel_after_sending: false
+  # Change / add order status, added Refunded
+  db:
+    Status: Enum('Unpaid,Paid,Processing,Refunded,Sent,Complete,AdminCancelled,MemberCancelled,Cart','Cart')
+  # For logging order status changes & emailing notifications to customers
+  log_status:
+    - Processing
+    - Sent
+    - MemberCancelled
+    - AdminCancelled
+
+OrderActionsForm:
+  # allow_paying: false # disable prompt to pay an unpaid order on the AccountPage
+  # allow_cancelling: true # allow cancelling of an order on the AccountPage
+  email_notification: true  # Send email upon cancellation of an order
+
+OrderManipulation:
+  allow_cancelling: true
+  allow_paying: true
+
+#OrderProcessor:
+#  send_confirmation: true  #send order confirmation when an order is placed, but unpaid
+#  send_admin_notification: true  # copy to admin
+
+Product:
+  global_allow_purchase: false
+  # length_unit: 'M'
+  # weight_unit: 'Pounds'
+  db: # Revised decimal places
+    CostPrice: 'Currency(19,2)'
+    BasePrice: 'Currency(19,2)'
+    Weight: 'Decimal(12,3)'
+    Height: 'Decimal(12,3)'
+    Width: 'Decimal(12,3)'
+    Depth: 'Decimal(12,3)'
+
+# Change the dimensions of product thumbnails
+Product_Image:
+  thumbnail_width: 140
+  thumbnail_height: 100
+  content_image_width: 200
+  large_image_width: 200
+
+ProductCategory:
+  include_child_groups: true
+  must_have_price: true
+  sort_options:
+    'Title' : 'Alphabetical'
+    'Price' : 'Lowest Price'
+
+ShopConfig:
+  base_currency: 'NZD'
+  email_from: sales@myshop.com
+  receipt_subject: "Thank you for your order at www.myshop.com - Order #%d"
+
+ShopCurrency:
+  decimal_delimiter: '.'
+  thousand_delimiter: ','
+  # european style currencies, e.g. 45,00 € instead of €45,00
+  append_symbol: true
+
+ShoppingCart_Controller:
+  # Redirect to the cart page after manipulating the shopping cart
+  direct_to_cart_page: true
+  # disable security token for cart-links
+  disable_security_token: true

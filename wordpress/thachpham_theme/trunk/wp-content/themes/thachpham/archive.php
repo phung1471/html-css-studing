@@ -3,34 +3,37 @@
         <div class="archive-title">
             <h2>
                 <?php
-                if ( is_tag() ) :
-                    printf( __('Posts Tagged: %1$s','thachpham'), single_tag_title( '', false ) );
-                elseif ( is_category() ) :
-                    printf( __('Posts Categorized: %1$s','thachpham'), single_cat_title( '', false ) );
-                elseif ( is_day() ) :
-                    printf( __('Daily Archives: %1$s','thachpham'), the_time('l, F j, Y') );
-                elseif ( is_month() ) :
-                    printf( __('Monthly Archives: %1$s','thachpham'), the_time('F Y') );
-                elseif ( is_year() ) :
-                    printf( __('Yearly Archives: %1$s','thachpham'), the_time('Y') );
+                if (is_tag()) :
+                    printf(__('Posts Tagged: %1$s', 'thachpham'), single_tag_title('', false));
+                elseif (is_category()) :
+                    printf(__('Posts Categorized: %1$s', 'thachpham'), single_cat_title('', false));
+                elseif (is_day()) :
+                    printf(__('Daily Archives: %1$s', 'thachpham'), the_time('l, F j, Y'));
+                elseif (is_month()) :
+                    printf(__('Monthly Archives: %1$s', 'thachpham'), the_time('F Y'));
+                elseif (is_year()) :
+                    printf(__('Yearly Archives: %1$s', 'thachpham'), the_time('Y'));
                 endif;
                 ?>
             </h2>
         </div>
-        <?php if ( is_tag() || is_category() ) : ?>
+        <?php if (is_tag() || is_category()) : ?>
             <div class="archive-description">
                 <?php echo term_description(); ?>
             </div>
         <?php endif; ?>
 
         <section id="main-content">
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'content', get_post_format() ); ?>
-            <?php endwhile; ?>
-                <?php thachpham_pagination(); ?>
-            <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
-            <?php endif; ?>
+            <?php
+            if (have_posts()) :
+                while (have_posts()) : the_post();
+                    get_template_part('template-parts/post/content', get_post_format());
+                endwhile;
+                thachpham_pagination();
+            else :
+                get_template_part('template-parts/post/content', 'none');
+            endif;
+            ?>
         </section>
 
         <section id="sidebar">
@@ -38,12 +41,12 @@
         </section>
 
         <section id="main-content">
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'content', get_post_format() ); ?>
+            <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                <?php get_template_part('template-parts/post/content', get_post_format()); ?>
             <?php endwhile; ?>
                 <?php thachpham_pagination(); ?>
             <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
+                <?php get_template_part('template-parts/post/content', 'none'); ?>
             <?php endif; ?>
         </section>
 

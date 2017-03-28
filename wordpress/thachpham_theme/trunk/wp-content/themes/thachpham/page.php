@@ -1,19 +1,20 @@
 <?php get_header(); ?>
     <div id="content" class="content site-content">
-
         <section id="main-content" class="site-main" role="main">
-            <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-                <?php get_template_part( 'content', get_post_format() ); ?>
-                <?php get_template_part( 'author-bio' ); ?>
-                <?php comments_template(); ?>
-            <?php endwhile; ?>
-            <?php else : ?>
-                <?php get_template_part( 'content', 'none' ); ?>
+            <?php if (have_posts()) : ?>
+                <?php while (have_posts()) : ?>
+                    <?php the_post(); ?>
+                    <div class="page-title">
+                        <h1><?php the_title() ?></h1>
+                    </div>
+                    <?php the_content(); ?>
+                <?php endwhile; ?>
             <?php endif; ?>
+
         </section>
         <section id="sidebar">
             <?php get_sidebar(); ?>
         </section>
-
     </div>
+
 <?php get_footer(); ?>

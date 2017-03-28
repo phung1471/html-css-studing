@@ -108,12 +108,12 @@ if (!function_exists('thachpham_header')) {
                 <?php
                 if ( is_home() ) {
                     printf( '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
-                        get_bloginfo('url'),
+                        home_url(),
                         get_bloginfo('description'),
                         get_bloginfo('sitename') );
                 } else {
                     printf( '<p><a href="%1$s" title="%2$s">%3$s</a></p>',
-                        get_bloginfo('url'),
+                        home_url(),
                         get_bloginfo('description'),
                         get_bloginfo('sitename') );
                 }
@@ -122,7 +122,7 @@ if (!function_exists('thachpham_header')) {
             <?php
             else :
                 ?>
-                <img src="<?php echo $tp_options['logo-image']['url']; ?>" />
+                <a href="./"><img src="<?php echo $tp_options['logo-image']['url']; ?>" /></a>
             <?php endif; ?>
         </div>
         <div class="site-description"><?php bloginfo('description'); ?></div><?php
@@ -142,7 +142,7 @@ if ( ! function_exists( 'thachpham_logo' ) ) {
         <?php if ( $tp_options['logo-on'] == 1 ) : ?>
 
             <div class="logo">
-                <img src="<?php echo $tp_options['logo-image']['url']; ?>">
+                <a href="./"><img src="<?php echo $tp_options['logo-image']['url']; ?>"></a>
             </div>
 
         <?php else : ?>
@@ -153,14 +153,14 @@ if ( ! function_exists( 'thachpham_logo' ) ) {
                     <?php if ( is_home() ) {
                         printf(
                             '<h1><a href="%1$s" title="%2$s">%3$s</a></h1>',
-                            get_bloginfo( 'url' ),
+                            esc_url( home_url() ),
                             get_bloginfo( 'description' ),
                             get_bloginfo( 'sitename' )
                         );
                     } else {
                         printf(
                             '<a href="%1$s" title="%2$s">%3$s</a>',
-                            get_bloginfo( 'url' ),
+                            esc_url( home_url() ),
                             get_bloginfo( 'description' ),
                             get_bloginfo( 'sitename' )
                         );
@@ -349,15 +349,17 @@ if ( ! function_exists( 'thachpham_entry_tag' ) ) {
 /*
  * Tạo sidebar cho theme
  */
-$sidebar = array(
-    'name' => __('Main Sidebar', 'thachpham'),
-    'id' => 'main-sidebar',
-    'description' => 'Main sidebar for Thachpham theme',
-    'class' => 'main-sidebar',
-    'before_title' => '<h3 class="widgettitle">',
-    'after_sidebar' => '</h3>'
-);
-register_sidebar( $sidebar );
+function register_custom_sidebar(){
+    register_sidebar(array(
+        'name' => __('Main Sidebar', 'thachpham'),
+        'id' => 'main-sidebar',
+        'description' => 'Main sidebar for Thachpham theme',
+        'class' => 'main-sidebar',
+        'before_title' => '<h3 class="widgettitle">',
+        'after_sidebar' => '</h3>'
+    ));
+}
+add_action( 'widgets_init', 'register_custom_sidebar' );
 
 /**
 @ Chèn CSS và Javascript vào theme

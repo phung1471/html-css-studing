@@ -1,0 +1,30 @@
+---
+name: SwipeStripe
+---
+
+Director:
+  rules:
+    'product//$ID!/$Action': 'Product_Controller'
+
+Modifier:
+  Enabled:
+    -
+
+ShopAdmin:
+  menu_icon: 'swipestripe/images/basket.png'
+
+Security:
+  default_login_dest: 'account'
+
+Payment:
+  extensions: 
+    - 'Payment_Extension'
+PaymentProcessor:
+  extensions: 
+    - 'Payment_ProcessorExtension'
+LeftAndMain:
+  extensions: 
+    - 'ShopAdmin_LeftAndMainExtension'
+Page_Controller:
+  extensions: 
+    - 'Cart'

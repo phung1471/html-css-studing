@@ -1,14 +1,16 @@
 /*
  * |---:[Đoạn này sẽ chứa các đoạn giới thiệu và thông tin về theme, như tên theme (Theme Name), tên tác giả (Theme Author), địa chỉ của tác giả (Author URI),...]:---|
 
- * Theme Name: ThachPham Theme
+ * Theme Name: ThachPham
  * Description: Đây là một theme đơn giản để thực hành Lập trình theme WordPress
  * Theme URI: https://thachpham.com/serie/lap-trinh-theme-wordpress
  * Version: 1.0
  * Theme Author: ThachPham
  * Author URI: https://thachpham.com
- * Tags: starter theme, framework theme, two-columns, customize
- * Textdomain: thachpham
+ * License: GNU General Public License v2 or later
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.html
+ * Tags: blog, two-columns, left-sidebar, accessibility-ready, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-images, microformats, post-formats, rtl-language-support, sticky-post, threaded-comments, translation-ready
+ * Text Domain: thachpham
  */
 
 /*! normalize.css v1.0.0 | MIT License | git.io/normalize */
@@ -376,3 +378,7 @@ blockquote.right {
     font-weight: bold;
     font-size: 1.1em;
 }
+
+.sticky{}
+.screen-reader-text{}
+.bypostauthor{}
