@@ -14,12 +14,13 @@
       }
       .top-bottom{
         height: 23px;
+        background: $white;
         width: 1000%;
         position: absolute;
         bottom: -12px;
         right: 42px;
         z-index: 99;
-        background: #ffff;
+        background: $white;
       }
       .slun{
         height: 23px;
@@ -83,6 +84,7 @@
     ol{
       li{
         background: $white;
+        margin-left: 10px;
         border: none;
       }
       .active{
@@ -94,18 +96,21 @@
         img{
           width: 100%;
         }
+        .gradient{
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
         .text-wrapper{
           height: 100%;
           .slide-text{
             position: absolute;
-            top: 30%;
-//            left: 50%;
-//            transform: translateX(-50%);
+            bottom: 60px;
             padding: 0 30px;
             max-width: 960px;
-            font-weight: bold;
-            color: $orange;
-            font-size: 16px;
+            font-weight: 100;
+            color: $white;
+            font-size: 34px;
           }
         }
       }

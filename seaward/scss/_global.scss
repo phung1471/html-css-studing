@@ -21,12 +21,12 @@ a {
 }
 
 .btn-org{
-  @include border-radius-circle(5px);
+  @include border-radius-circle(3px);
   background: $orange url('../img/arrow_left.png') no-repeat center right;
   color: $white;
   border: 1px solid $orange;
-  padding-right: 40px;
-  :hover{
+  padding: 10px 40px 10px 15px;
+  &:hover{
     background: $white url("../img/arrow_left2.png") no-repeat center right;
     color: $orange;
   }
