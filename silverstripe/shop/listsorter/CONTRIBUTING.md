@@ -1,1 +1,0 @@
-Check the github issues list before submitting new pull requests.
