@@ -6,20 +6,40 @@ section{
     background: url("../img/background1.jpg") no-repeat;
     background-size: cover;
     padding: 60px 0;
-    min-height: 386px;
+    min-height: 500px;
     .block-content{
-      margin-top: 10px;
-      line-height: 24px;
-      font-size: 16px;
-      h1,h2,h3,h4,h5{
-        margin-bottom: 26px;
-      }
-      h2{
-        font-size: 32px;
-      }
-      p{
-        margin-bottom: 30px;
-      }
+      @include block-content();
     }
   }
+
+  .block-background{
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 450px;
+    .block-wrapper{
+      position: relative;
+      .block-content{
+        @include block-content();
+        color: $white;
+        background-color: rgba(0,0,0,0.5);
+        padding: 10px 30px;
+        position: absolute;
+        min-width: 350px;
+        min-height: 350px;
+        bottom: -450px;
+        &-left{
+          left: 0;
+        }
+        &-right{
+          right: 0;
+        }
+      }
+    }
+
+  }
+}
+
+.red-div{
+  background-color: #804340;
+  height: 35px;
 }

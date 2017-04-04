@@ -117,3 +117,33 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .seaward-header{
+    .wrapper{
+      .menu{
+        .dropdown{
+          display: block;
+        }
+        .nav-desktop{
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .seaward-header{
+    .wrapper{
+      .menu{
+        .dropdown{
+          display: none;
+        }
+        .nav-desktop{
+          display: block;
+        }
+      }
+    }
+  }
+}

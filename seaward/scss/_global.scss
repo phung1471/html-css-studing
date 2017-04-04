@@ -1,18 +1,18 @@
 html, body{
+  font-family: 'Open Sans', sans-serif;
   background: #ffffff;
+  a {
+    text-decoration: none;
+    color: #000000;
+    &:hover{
+      color: $orange;
+      text-decoration: none;
+    }
+  }
 }
 
 .container{
   max-width: 960px;
-}
-
-a {
-  text-decoration: none;
-  color: #000000;
-  &:hover{
-    color: $orange;
-    text-decoration: none;
-  }
 }
 
 .ul-no-style{
