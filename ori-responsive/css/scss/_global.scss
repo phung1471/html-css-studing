@@ -1,18 +1,19 @@
-@media print{
-  body{
+@media print {
+  body {
     font-family: "Times New Roman";
     font-size: 12px;
     width: 75%;
   }
 }
 
-*{
+* {
+  text-align: justify;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
-body{
+body {
   font-family: Arial, san-serif;
   font-size: 14px;
   line-height: 1.5;
@@ -20,12 +21,10 @@ body{
   margin: 0 auto;
 }
 
-.float-left{
+.float-left {
   float: left;
 }
 
-@media (max-width: 960px){
-  #wrapper{
-    width: 100%;
-  }
+#wrapper {
+  width: 100%;
 }

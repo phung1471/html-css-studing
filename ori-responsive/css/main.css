@@ -446,12 +446,13 @@ th {
 }
 /* line 9, scss/_global.scss */
 * {
+  text-align: justify;
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
 }
 
-/* line 15, scss/_global.scss */
+/* line 16, scss/_global.scss */
 body {
   font-family: Arial, san-serif;
   font-size: 14px;
@@ -460,17 +461,16 @@ body {
   margin: 0 auto;
 }
 
-/* line 23, scss/_global.scss */
+/* line 24, scss/_global.scss */
 .float-left {
   float: left;
 }
 
-@media (max-width: 960px) {
-  /* line 28, scss/_global.scss */
-  #wrapper {
-    width: 100%;
-  }
+/* line 28, scss/_global.scss */
+#wrapper {
+  width: 100%;
 }
+
 /* line 1, scss/_head.scss */
 .menu {
   width: 30%;
@@ -515,7 +515,7 @@ body {
   margin-right: 10px;
 }
 
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
   /*****HEADER*****/
   /* line 3, scss/_queries_500.scss */
   .menu {
