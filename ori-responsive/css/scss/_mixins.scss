@@ -1,0 +1,99 @@
+@mixin font-face($style-name, $file, $fontWeight,$fontStyle, $category:"") {
+  $filepath: "../fonts/" + $file;
+  @font-face {
+    font-family: "#{$style-name}";
+    src: url($filepath + ".eot");
+    src: url($filepath + ".eot?#iefix") format('embedded-opentype'),
+    url($filepath + ".woff") format('woff'),
+    url($filepath + ".ttf")  format('truetype'),
+    url($filepath + ".svg#" + $style-name + "") format('svg');
+    font-weight: $fontWeight;
+    font-style: $fontStyle
+  }
+  %#{$style-name} {
+    font: {
+      @if $category != "" {
+        family: "#{$style-name}", #{$category};
+      }
+      @else {
+        family: "#{$style-name}";
+        weight: normal;
+      }
+    }
+  }
+}
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+@mixin tranform-obj($deg){
+  -webkit-transform: rotate($deg);
+  -moz-transform: rotate($deg);
+  -ms-transform: rotate($deg);
+  -o-transform: rotate($deg);
+  transform: rotate($deg);
+}
+
+@mixin clearfix-cs(){
+  overflow: hidden;
+  &:after{
+    clear: both;
+  }
+  &:before{
+    display: table;
+    content: "";
+  }
+}
+
+@mixin box-shadow(){
+  -o-box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  -moz-box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  -webkit-box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+  box-shadow: 1px 1px 3px rgba(0,0,0,.5);
+}
+
+@mixin box-shadow-color($color){
+  -o-box-shadow: 0 0 3px $color;
+  -moz-box-shadow: 0 0 3px $color;
+  -webkit-box-shadow: 0 0 3px $color;
+  box-shadow: 0 0 3px $color;
+}
+
+@mixin transbackground($s){
+  -webkit-transition: background $s linear;
+  -moz-transition: background $s linear;
+  -ms-transition: background $s linear;
+  -o-transition: background $s linear;
+  transition: background $s linear;
+}
+
+@mixin transdisplay($s){
+  -webkit-transition: display $s linear;
+  -moz-transition: display $s linear;
+  -ms-transition: display $s linear;
+  -o-transition: display $s linear;
+  transition: display $s linear;
+}
+
+@mixin box-sizing($option){
+  -webkit-box-sizing: $option;
+  -moz-box-sizing: $option;
+  -ms-box-sizin: $option;
+  box-sizing: $option;
+}
+
+@mixin bgImage($urlI){
+  -webkit-background-image: url($urlI);
+  -moz-background-image: url($urlI);
+  -ms-background-image: url($urlI);
+  background-image: url($urlI);
+}
+
+@mixin bgSize($size){
+  -webkit-background-size: $size;
+  -moz-background-size: $size;
+  -o-background-size: $size;
+  background-size: $size;
+}

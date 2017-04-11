@@ -1,0 +1,27 @@
+.menu {
+  width: 30%;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+
+  li {margin-bottom: 5px;}
+
+  a {
+    &:link {
+      height: 40px;
+      background: #BBB;
+      display: block;
+      line-height: 40px;
+      padding-left: 10px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+    }
+    &:visited{
+      color: #fff;
+    }
+  }
+}
