@@ -457,18 +457,18 @@ body {
   font-family: Arial, san-serif;
   font-size: 14px;
   line-height: 1.5;
-  max-width: 960px;
-  margin: 0 auto;
 }
 
-/* line 24, scss/_global.scss */
+/* line 22, scss/_global.scss */
 .float-left {
   float: left;
 }
 
-/* line 28, scss/_global.scss */
+/* line 26, scss/_global.scss */
 #wrapper {
   width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 /* line 1, scss/_head.scss */
