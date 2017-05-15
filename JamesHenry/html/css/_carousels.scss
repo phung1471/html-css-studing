@@ -1,0 +1,213 @@
+/** Stage container **/
+.connected-carousels { position:relative;}
+.connected-carousels .stage {
+    width: 100%;
+    margin: 0px auto;
+    position: relative;
+}
+.connected-carousels .navigation-container { position:absolute; bottom:0; left:0; width:100%;}
+.connected-carousels .photo-credits {
+    position: absolute;
+    right: 15px;
+    bottom: 0;
+    font-size: 13px;
+    color: #fff;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.85);
+    opacity: .66;
+	display:none;
+}
+
+.connected-carousels .photo-credits a {
+    color: #fff;
+}
+
+/** Navigation container **/
+
+.connected-carousels .navigation {
+    margin: 0px auto;
+    position: relative;
+	background: url(../img/bg-c.png) repeat; padding:15px 50px;
+}
+
+/** Shared carousel styles **/
+
+.connected-carousels .carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.connected-carousels .carousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.connected-carousels .carousel li {
+    float: left;
+}
+
+/** Stage carousel specific styles **/
+
+
+
+/** Navigation carousel specific styles **/
+
+.connected-carousels .carousel-navigation { margin-bottom:0;
+	li { cursor: pointer; text-align:center;
+		> div { display:inline-block; margin:0 3px; border: 3px solid #fff; -moz-box-sizing:border-box; box-sizing:border-box;}
+		img { width: 100%; height:auto; }
+		&.active > div { border-color: #8f925d; }
+	}
+}
+/** Stage carousel controls **/
+.connected-carousels .carousel-stage {
+    height: 600px;
+    border: 0px solid #fff;
+}
+.connected-carousels .prev-stage,
+.connected-carousels .next-stage {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 305px;
+    height: 600px;
+    color: #fff;
+}
+
+.connected-carousels .prev-stage {
+    left: 0;
+}
+
+.connected-carousels .next-stage {
+    right: 0;
+}
+
+.connected-carousels .prev-stage.inactive,
+.connected-carousels .next-stage.inactive {
+    display: none;
+}
+
+.connected-carousels .prev-stage span,
+.connected-carousels .next-stage span {
+    position: absolute;
+    top: 40%;
+    width: 34px;
+    height: 56px;
+    margin-top: -28px;
+	text-indent: -9999px;
+	background-repeat:no-repeat;
+	background-position: top left;
+}
+
+.connected-carousels .prev-stage span {
+    left: 20px;
+	background-image:url(../img/icon-prev.png);
+}
+
+.connected-carousels .next-stage span {
+    right: 20px;
+	background-image:url(../img/icon-next.png);
+}
+
+.connected-carousels .prev-stage:hover span,
+.connected-carousels .next-stage:hover span {
+    display: block;
+}
+
+/** Navigation carousel controls **/
+
+.connected-carousels .prev-navigation,
+.connected-carousels .next-navigation {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #8f925d;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 20px/29px Arial, sans-serif;
+	text-align:center;
+	top:50%;
+	margin-top:-15px;
+    -webkit-border-radius: 100px;
+       -moz-border-radius: 100px;
+            border-radius: 1000px;
+}
+
+.connected-carousels .prev-navigation {
+    left: 10px;
+}
+
+.connected-carousels .next-navigation {
+    right: 10px;
+}
+
+.connected-carousels .prev-navigation.inactive,
+.connected-carousels .next-navigation.inactive {
+    opacity: .5;
+    cursor: default;
+}
+.connected-carousels .prev-navigation:hover,
+.connected-carousels .next-navigation:hover { background:#8f925d;}
+
+@media (max-width: 992px){
+	.connected-carousels .navigation { padding:10px 35px;}
+	.connected-carousels .prev-navigation,
+	.connected-carousels .next-navigation { width:21px; height:21px; line-height:21px; font-size:15px; margin-top:-10px;}
+	.connected-carousels .prev-navigation {
+		left: 5px;
+	}
+	
+	.connected-carousels .next-navigation {
+		right: 5px;
+	}
+	.connected-carousels .carousel-stage {
+		height: 395px;
+	}
+	.connected-carousels .prev-stage,
+	.connected-carousels .next-stage {
+		width: 100px;
+		height: 395px;
+	}
+	
+	.connected-carousels .prev-stage span,
+	.connected-carousels .next-stage span {
+		width: 20px;
+		height: 35px;
+		margin-top: -17px;
+		background-size: 20px auto;
+	}
+
+}
+
+@media (max-width: 480px){ 
+	.connected-carousels .navigation { padding:7px 40px;}
+	.connected-carousels .prev-navigation,
+	.connected-carousels .next-navigation { width:16px; height:16px; line-height:13px; font-size:13px; margin-top:-8px;}
+	.connected-carousels .prev-navigation {
+		left: 10px;
+	}
+	
+	.connected-carousels .next-navigation {
+		right: 10px;
+	}
+	.connected-carousels .carousel-navigation li > div { border-width:2px;}
+	.connected-carousels .carousel-stage {
+		height: 245px;
+	}
+	.connected-carousels .prev-stage,
+	.connected-carousels .next-stage {
+		width: 100px;
+		height: 245px;
+	}
+	.connected-carousels .prev-stage span,
+	.connected-carousels .next-stage span {
+		width: 17px;
+		height: 28px;
+		margin-top: -14px;
+		background-size: 17px auto;
+	}
+}

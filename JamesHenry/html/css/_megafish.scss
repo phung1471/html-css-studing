@@ -1,0 +1,100 @@
+/*** ESSENTIAL STYLES ***/
+.sf-menu {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	.sf-mega {
+		position: absolute;
+		display: none;
+		top: 100%;
+		left: 0;
+		z-index: 99;
+	}
+	> li {
+		float: left;
+	}
+	li:hover > .sf-mega,
+	li.sfHover > .sf-mega {
+		display: block;
+	}
+	> li > a {
+		display: block;
+		position: relative;
+	}
+	>li.show > .sf-mega { display:block !important;}
+}
+/*** DEMO SKIN ***/
+.sf-menu {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	.sf-mega {
+		width: 100%; /* allow long menu items to determine submenu width */
+		@include box-shadow(3px,3px,0,0,rgba(0,0,0,0.2));
+	}
+	> li > a {
+		padding: 0;
+		text-decoration: none;
+		zoom: 1; /* IE7 */
+		color: #404527;
+		font-size:20px;
+		line-height:51px;
+	}
+	> li {
+		border-bottom:5px solid transparent;
+	}
+	> li + li {
+		background:url(../img/header-menu-sep.png) no-repeat left center;
+	}
+	> li:hover, > li.sfHover, > li.current {
+		/* only transition out, not in */
+		-webkit-transition: none;
+		transition: none;
+		> a {
+			color:#8f925d;
+			font-family:'gsBold'
+		}
+	}
+	> li.sfHover {
+		border-bottom: 5px solid #8f925d;
+	}
+}
+/*** mega menu dropdown ***/
+.sf-mega {
+	background: #fff;
+	padding: 30px 15px;
+	box-sizing: border-box;
+	border-top: 1px solid #8f925d;
+}
+.sf-mega-section {
+	float: left;
+	width: 8em; /* optional */
+	padding: 0 1em 1em 0;
+	margin-right: 1em;
+	border-right: 1px solid #b4c8f5;
+}
+/*** arrows (for all except IE7) **/
+.sf-arrows {
+	.sf-with-ul {
+		padding-right: 0em;
+		*padding-right: 1em; /* no CSS arrows for IE7 (lack pseudo-elements) */
+		&:after {
+			display:none;
+			content: '';
+			position: absolute;
+			top: 50%;
+			right: 1em;
+			margin-top: -3px;
+			height: 0;
+			width: 0;
+			/* order of following 3 rules important for fallbacks to work */
+			border: 5px solid transparent;
+			border-top-color: #dFeEFF; /* edit this to suit design (no rgba in IE8) */
+			border-top-color: rgba(255,255,255,.5);
+		}
+	}
+	> li > .sf-with-ul:focus:after, > li:hover > .sf-with-ul:after, > .sfHover > .sf-with-ul:after {
+		border-top-color: white; /* IE8 fallback colour */
+	}
+}

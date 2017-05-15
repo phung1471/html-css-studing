@@ -1,0 +1,49 @@
+1. General:
+	- Slice Responsive html 8 pages
+	- Mega menu
+2. Homepage:
+	- Slider
+	- List 8 featured pages
+	- Testimonial
+	- Contact form
+3. Total Flooring Solutions (FlooringSolutionPage):    
+	create 3 sitetree dropdown to choose: 3 pages
+
+	The three funnels should have the following anchors: #types, #species, #finish
+	-Page 1: TotalFlooring  -> #types
+		->list all subpage by parent
+	-Page 2: WoodSpecies -> #species
+		->list all subpage by parent
+	-Page 3: Sanding, Coating -> #finish
+		->list all subpage by parent
+4. FlooringPage:
+	- List all sub pages with (if FlooringFeature checkbox is checked)    
+	- Flooring Services - all subpage (if FlooringService checkbox is checked)
+
+5. PorfolioHolder( Residential Portfolio or Commercial Portfolio ):
+	- List all Porfolio
+6. Porfolio:
+	- Carousel images
+7. News (use blog module):
+	- Search form
+	- Categories(add BlogCategories module)
+	- List News with paging
+8. FAQHolderPage: (same NEWS template)
+	- Has_many: Categories
+9. FAQPage
+	- has_one Category
+9. ContactUs:
+	- Contact form
+	- Google maps
+10. Generic page (Page):
+	- Image on header page
+	- Content
+	- Left Sidebar
+		- has_many Page 
+		- create new GridFieldConfig_RelationEditor to manage related page
+		- add sortable on related list
+	- Testimonial(for all page)
+	- checkbox: Featured
+	- checkbox: Floor services
+	- checkbox: Use custom sidebar
+	- CustomHeading
